@@ -553,7 +553,7 @@ static const struct grub_install_image_target_desc image_targets[] =
     },
     /* For coreboot versions that don't support self-relocating images. */
     {
-      .dirname = "arm-coreboot-vexpress",
+      .dirname = "arm-coreboot",
       .names = { "arm-coreboot-vexpress", NULL },
       .voidp_sizeof = 4,
       .bigendian = 0,
@@ -572,7 +572,7 @@ static const struct grub_install_image_target_desc image_targets[] =
       .link_addr = 0x62000000,
     },
     {
-      .dirname = "arm-coreboot-veyron",
+      .dirname = "arm-coreboot",
       .names = { "arm-coreboot-veyron", NULL },
       .voidp_sizeof = 4,
       .bigendian = 0,
