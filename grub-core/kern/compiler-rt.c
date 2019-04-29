@@ -420,7 +420,7 @@ __aeabi_llsl (grub_uint64_t u, int b)
 
 #endif
 
-#if defined(__mips__) || defined(__riscv) || defined(__sparc__)
+#if defined(__mips__) || defined(__riscv) || defined(__sparc__) || defined(__arm__)
 /* Based on libgcc from gcc suite. */
 int
 __clzsi2 (grub_uint32_t val)
