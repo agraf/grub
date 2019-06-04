@@ -57,6 +57,7 @@ script:
       [ "$arch" = "arm" ] && arch=arm-linux-gnueabi;
       [ "$arch" = "ia64" ] && arch=ia64-linux;
       [ "$arch" = "mipsel" ] && arch=mips64-linux;
+      [ "$arch" = "mips" ] && arch=mips64-linux;
       [ "$arch" = "powerpc" ] && arch=powerpc64-linux;
       [ "$arch" = "riscv32" ] && arch=riscv32-linux;
       [ "$arch" = "riscv64" ] && arch=riscv64-linux;
@@ -118,10 +119,10 @@ matrix:
     # MIPS fails with the following error currently. If anyone cares about MIPS
     # testing, please reenable it after resolving the problem:
     #    configure: error: could not force big-endian
-    #- name: "mips"
-    #  env:
-    #    - GRUB_TARGETS="mips-arc mipsel-arc mipsel-qemu_mips-elf mips-qemu_mips-flash"
-    #    - CROSS_TARGETS="mips64-linux"
+    - name: "mips"
+      env:
+        - GRUB_TARGETS="mips-arc mipsel-arc mipsel-qemu_mips-elf mips-qemu_mips-flash"
+        - CROSS_TARGETS="mips64-linux"
     - name: "arm"
       env:
         - GRUB_TARGETS="arm-coreboot-vexpress arm-efi arm-uboot"
