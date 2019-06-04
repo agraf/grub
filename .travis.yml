@@ -108,10 +108,13 @@ matrix:
       env:
         - GRUB_TARGETS="sparc64-ieee1275-aout"
         - CROSS_TARGETS="sparc64-linux"
-    - name: "ia64"
-      env:
-        - GRUB_TARGETS="ia64-efi"
-        - CROSS_TARGETS="ia64-linux"
+    # IA fails with the following error currently. If anyone cares about IA64
+    # testing, please reenable it after resolving the problem:
+    #    grub-mkimage: error: undefined symbol grub_arch_sync_dma_caches.
+    #- name: "ia64"
+    #  env:
+    #    - GRUB_TARGETS="ia64-efi"
+    #    - CROSS_TARGETS="ia64-linux"
     # MIPS fails with the following error currently. If anyone cares about MIPS
     # testing, please reenable it after resolving the problem:
     #    configure: error: could not force big-endian
